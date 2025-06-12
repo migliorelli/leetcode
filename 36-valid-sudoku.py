@@ -29,14 +29,8 @@ class Solution(object):
         ]
 
         for row_idx in range(9):
-            row_quo = 0 if row_idx == 0 else row_idx / 3
-            box_row_idx = int(row_quo)
-
             for col_idx in range(9):
-                col_quo = 0 if col_idx == 0 else col_idx / 3
-                box_col_idx = int(col_quo)
-
-                sqr = boxes[box_row_idx][box_col_idx]
+                sqr = boxes[row_idx // 3][col_idx // 3]
                 if board[row_idx][col_idx] == ".":
                     continue
                 if board[row_idx][col_idx] in sqr:
