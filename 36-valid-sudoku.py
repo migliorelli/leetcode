@@ -30,11 +30,11 @@ class Solution(object):
 
         for row_idx in range(9):
             for col_idx in range(9):
-                sqr = boxes[row_idx // 3][col_idx // 3]
+                box = boxes[row_idx // 3][col_idx // 3]
                 if board[row_idx][col_idx] == ".":
                     continue
-                if board[row_idx][col_idx] in sqr:
+                if board[row_idx][col_idx] in box:
                     return False
-                sqr.append(board[row_idx][col_idx])
+                box.append(board[row_idx][col_idx])
 
         return True
